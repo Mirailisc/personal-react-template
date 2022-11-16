@@ -1,0 +1,10 @@
+version: '3.5'
+
+services:
+  app:
+    build:
+      context: .
+      target: setup
+    command: /bin/sh -c "pnpm i && pnpm start"
+    volumes:
+      - ./:/app
