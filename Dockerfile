@@ -8,7 +8,6 @@ FROM setup as build
 RUN pnpm i --frozen-lockfile
 
 COPY . ./
-RUN pnpm run prisma:generate
 
 FROM build as deploy
 CMD [ "pnpm", "start" ]
